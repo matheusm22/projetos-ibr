@@ -43,7 +43,7 @@
     <!-- Formulário para Consultar informações de CEP -->
     <form id="cep-form" class="form">
         <div class="form-group">
-            <input class="input borda" type="text" id="cep"  oninput="validarCep(), delayconsultarCep()" required>
+            <input class="input borda" type="text" id="cep"  oninput="validarEntrada(event), validarCep(), delayconsultarCep()" required>
             <label for="cep-input" id="ceplabel">CEP</label>
         </div>
        
@@ -52,7 +52,7 @@
     <!-- Formulário para Consultar informações de CNPJ -->
     <form id="cnpj-form" class="form" action="/consulta_cnpj" method="POST">
         <div class="form-group">
-            <input class="input borda" type="text" name="cnpj" id="cnpj"  oninput="validarCNPJ(), delayConsultarCnpj()" required>
+            <input class="input borda" type="text" name="cnpj" id="cnpj"  oninput="validarEntrada(event), validarCNPJ(), delayConsultarCnpj()" required>
             <label for="cnpj" id="cnpjlabel">CNPJ</label>
         </div>
     </form>

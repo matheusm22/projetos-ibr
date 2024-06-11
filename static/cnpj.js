@@ -132,7 +132,7 @@ function novaConsultaCnpj() {
     if (modalContent) {
         modalContent.innerHTML = `
         <div class="form-group">
-        <input class="input borda" style="margin-top:10px;" oninput="validarCNPJ(), delayConsultarCnpj()" type="text" name="cnpj" id="cnpj" required>
+        <input class="input borda" style="margin-top:10px;" oninput="validarEntrada(event),validarCNPJ(), delayConsultarCnpj()" type="text" name="cnpj" id="cnpj" required>
         <label for="cnpj" style="margin-top:7px;">CNPJ</label>
         </div>`
     }

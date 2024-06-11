@@ -99,3 +99,12 @@ function copiarTexto(texto) {
     }
 }
 
+function validarEntrada(evento) {
+    const campoEntrada = evento.target;
+    const caracteresInvalidos = /[^0-9.\-\/]/g; // Regex para encontrar qualquer coisa que não seja um dígito
+
+        if (caracteresInvalidos.test(campoEntrada.value)) {
+            campoEntrada.value = campoEntrada.value.replace(caracteresInvalidos, '');
+        }
+}
+
