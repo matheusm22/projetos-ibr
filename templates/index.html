@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Informações</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../static/styles.css">
+    <link rel="shortcut icon" href="../static/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Sistema de Consulta</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+                <button class="consulta" onclick="openModal('cep')">CEP</button>
+            </li>
+            <li class="nav-item">
+                <button class="consulta" onclick="openModal('cnpj')">CNPJ</button>
+            </li>
+            <li class="nav-item">
+                <button class="consulta" onclick="openModal('ibge')">Código IBGE</button>
+            </li>
+            <li class="nav-item">
+                <button class="consulta" style="width: 175px;" onclick="openModal('sefaz'); Consulta_sefaz()"> Disponibilidade Sefaz</button>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h4 id="modalTitle"></h4>
+            <div id="modalContent">
+                <p id="erro" style="color: red;"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Formulário para Consultar informações de CEP -->
+    <form id="cep-form" class="form">
+        <div class="form-group">
+            <input class="input borda" type="text" id="cep"  oninput="validarCep(), delayconsultarCep()" required>
+            <label for="cep-input" id="ceplabel">CEP</label>
+        </div>
+       
+    </form>
+
+    <!-- Formulário para Consultar informações de CNPJ -->
+    <form id="cnpj-form" class="form" action="/consulta_cnpj" method="POST">
+        <div class="form-group">
+            <input class="input borda" type="text" name="cnpj" id="cnpj"  oninput="validarCNPJ(), delayConsultarCnpj()" required>
+            <label for="cnpj" id="cnpjlabel">CNPJ</label>
+        </div>
+    </form>
+ 
+    <!-- Formulário para Consultar o código IBGE -->
+    <form id="ibge-form" class="form">
+        <div class="form-group">
+            <select class="input borda" id="estado_ibge" style="width: 100px; margin-left: 50px;"  oninput="verificarIBGE()" required>
+                <option value=""></option>
+                
+            </select>
+            <label for="estado_ibge" style="margin-left: 52px;">Estado</label>
+        </div>
+        <div class="form-group">
+            <input class="input borda" type="text" id="cidade" oninput="verificarIBGE(), delayConsultaIbge()"  required>
+            <label for="cidade">Cidade</label>
+        </div>
+       
+    </form>
+
+    <form id="sefaz-form" class="form">
+    </form>
+
+    <div id="copyModal" class="copy-modal">
+        <span>Texto copiado!</span>
+    </div>
+
+    <div class="img">
+        <img src="../static/logo.png" alt="">
+    </div>
+
+    <script src="../static/script.js"></script>
+    <script src="../static/cnpj.js"></script>
+    <script src="../static/ibge.js"></script>
+    <script src="../static/sefaz.js"></script>
+    <script src="../static/cep.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
