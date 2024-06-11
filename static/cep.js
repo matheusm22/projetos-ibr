@@ -95,7 +95,7 @@ function novaConsultaCep() {
     if (modalContent) {
         modalContent.innerHTML = `
         <div class="form-group">
-            <input class="input borda" type="text" id="cep" style="margin-top:10px; margin-left: 65px;"  oninput="validarEntrada(event),validarCep(), delayconsultarCep()" required>
+            <input class="input borda" type="text" id="cep"  style="margin-top:10px; margin-left: 65px;"  oninput="validarEntrada(event),validarCep(), delayconsultarCep()" required>
             <label for="cep-input" style="margin-top:7px; margin-left: 70px;">CEP</label>
         </div>
 `;
