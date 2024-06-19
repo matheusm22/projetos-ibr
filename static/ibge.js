@@ -79,6 +79,7 @@ function Consulta_Ibge() {
         })
         .catch(error => {
             console.error(error);
+            console.log('Verifica o flask!');
             if (modalContent) {
                 modalContent.innerHTML = `<p>${error.message || erro}</p>
                 <button class="consulta" onclick="novaConsultaIbge()">Nova consulta</button>`;

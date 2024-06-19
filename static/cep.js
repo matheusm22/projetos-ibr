@@ -45,6 +45,8 @@ function consultarCep() {
         })
         .catch((error) => {
             console.error('Erro ao consultar:', error);
+            console.log('Verifica o flask!');
+
         });
 }
 

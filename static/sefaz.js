@@ -60,6 +60,7 @@ function Consulta_sefaz() {
         })
         .catch(error => {
             console.error('Erro na consulta da Sefaz:', error);
+            console.log('Verifica o flask!');
             modalContent.innerHTML = '<p>Ocorreu um erro ao tentar consultar a disponibilidade da Sefaz. Tente novamente mais tarde.</p>';
         });
 }

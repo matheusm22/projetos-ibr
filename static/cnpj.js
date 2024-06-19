@@ -46,6 +46,7 @@ function ConsultarCnpj() {
         if (modalContent) {
             modalContent.innerHTML = `<p>Falha na conexão, tente novamente!</p>
             <button class="consulta" onclick="openModal('cnpj')">Nova consulta</button>`;
+            console.log('Verifica o flask!');
         }
     }, 5000);
 
@@ -112,8 +113,9 @@ function ConsultarCnpj() {
         .catch(error => {
             // Exibir uma mensagem de erro no console em caso de erro na requisição
             console.error(error);
+            console.log('Verifica o flask!');
             if (modalContent) {
-                modalContent.innerHTML = `<p>${error.message || erro}</p>
+                modalContent.innerHTML = `<p>Falha na conexão, tente novamente!</p>
                 <button class="consulta" onclick="openModal('cnpj')">Nova consulta</button>`;
             }
         });
