@@ -115,7 +115,7 @@ function novaConsultaIbge() {
     if (modalContent) {
         modalContent.innerHTML = `
         <div class="form-group">
-        <select class="input borda" id="estado_ibge"  oninput="verificarIBGE()" style="width: 100px; margin-top: 10px; margin-left:45px;"  required>
+        <select class="input borda" id="estado_ibge"  oninput="verificarIBGE()" style="width: 100px; margin-top: 10px; margin-left:65px;"  required>
             <option value=""></option>
             <option value="AC">AC</option>
             <option value="AL">AL</option>
@@ -145,7 +145,7 @@ function novaConsultaIbge() {
             <option value="SE">SE</option>
             <option value="TO">TO</option>
         </select>
-        <label for="estado_ibge" style="margin-top: 7px; margin-left:46px;">Estado</label>
+        <label for="estado_ibge" style="margin-top: 7px; margin-left:64px;">Estado</label>
     </div>
     <div class="form-group">
         <input class="input borda" type="text" id="cidade"  oninput="verificarIBGE(), delayConsultaIbge()" required>
