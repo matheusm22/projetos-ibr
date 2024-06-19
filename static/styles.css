@@ -152,7 +152,8 @@ select {
 
 .input:focus {
     outline: none;
-    border-radius: 54px;
+    border-radius: 22px;
+    font-size: 18px;
 }
 
 nav-item {
