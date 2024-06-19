@@ -138,11 +138,11 @@ select {
     border-radius: 14px;
     border-color: #049db5;
     border-width: 3px; 
-    border-style:dashed;
+    border-style:solid;
 }
 
 .input {
-    height: 35px;
+    height: 45px;
     padding: 0 10px;
 }
 
