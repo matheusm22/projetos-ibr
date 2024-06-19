@@ -232,9 +232,15 @@ img {
 .ativo {
     color: green;
 }
+.ativo::first-letter {
+    text-transform: uppercase;
+}
 
 .inativo {
     color: red;
+}
+.inativo::first-letter {
+    text-transform: uppercase;
 }
 
 
